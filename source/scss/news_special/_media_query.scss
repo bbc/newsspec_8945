@@ -1,0 +1,32 @@
+$fix-mqs: false !default;
+$min: false !default;
+$max: false !default;
+
+@mixin respondMinMax($min, $max) {
+    @if $fix-mqs {
+        @if $min == false {
+            $min: 0px;
+        }
+        @if $max == false {
+            $max: 1000000px;
+        }
+        @if ($fix-mqs >= $min) and ($fix-mqs <= $max) {
+            @content;
+        }
+    }
+    @elseif $max and $min {
+        @media screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    }
+    @elseif $min != false and $max == false {
+        @media screen and (min-width: $min) {
+            @content;
+        }
+    }
+    @elseif $max != false and $min == false {
+        @media screen and (max-width: $max) {
+            @content;
+        }
+    }
+}

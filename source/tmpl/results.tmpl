@@ -1,0 +1,268 @@
+<div class="result-page">
+	<button class="result-page--back-button">Back to questions</button>
+	<div class="result-total">
+		<p>
+			<h3 class="result-page--header result-total--text"
+				id="result-total--text__has-assets"
+				data-self-text="<%- self_results_eng_1_a_i %>" 
+				data-else-text="<%- someoneElse_results_eng_1_a_i %>">
+				<%= self_results_eng_1_a_i %>
+			</h3>			
+			<h3 class="result-page--header result-total--text hiddenElement"
+				id="result-total--text__no-assets"
+				data-self-text="<%- self_results_eng_1_a_iI %>" 
+				data-else-text="<%- someoneElse_results_eng_1_a_iI %>">
+				<%= self_results_eng_1_a_iI %>
+			</h3>
+
+			<span class="result-total--amount">£100,000</span><br/>
+			<span class="result-total--timeline">
+				Over 
+				<span class="result-total--timeline__years">5</span> years &amp;
+				<span class="result-total--timeline__months">3</span> months
+			</span><br/>
+			<span class="result-total--timeline-desc"
+				  data-self-text="<%- self_time_strap_eng %>" 
+				  data-else-text="<%- someoneElse_time_strap_eng %>">
+				  <%= self_time_strap_eng %>
+			</span><br/>	
+
+			<span class="care-bill--desc care-bill--desc__help"
+				  data-self-text="<%- self_total_help %>" 
+				  data-else-text="<%- someoneElse_total_help %>">
+				  <%= self_total_help %>
+			</span>
+			<span class="care-bill--desc care-bill--desc__no-help"
+				  data-self-text="<%- self_total_no_help %>" 
+				  data-else-text="<%= someoneElse_total_no_help %>">
+				  <%= self_total_no_help %>
+			</span>
+		</p>
+
+		<div class="results-chart">
+			<div class="results-chart--chart" id="results-chart--chart__total">
+				<!-- div content is placed here using templating engine -->
+			</div>
+		</div>
+
+		<small class="result-total--summary"
+				data-self-text="<%- self_bill_strap_2_eng %>" 
+				data-else-text="<%- someoneElse_bill_strap_2_eng %>">
+		</small>
+
+		<small class="care-bill--desc care-bill--house-inc"
+			  data-self-text="<%- self_house %>" 
+			  data-else-text="<%- someoneElse_house %>">
+			  <%= self_house %>
+		</small>
+		<small class="care-bill--desc care-bill--house-exc"
+			  data-self-text="<%- self_no_house %>" 
+			  data-else-text="<%= someoneElse_no_house %>">
+			  <%= self_no_house %>
+		</small>
+
+		<small class="care-bill--desc care-bill--desc-italic"
+			  data-self-text="<%- self_bill_disclaimer %>" 
+			  data-else-text="<%- someoneElse_bill_disclaimer %>">
+			  <%= self_bill_disclaimer %>
+		</small>
+	</div>
+
+	<hr/>
+
+	<div class="result-breakdown">
+		<h3 class="result-page--header"
+			data-self-text="<%- self_breakdown_eng %>" 
+			data-else-text="<%- someoneElse_breakdown_eng %>"></h3>
+
+		<div class="breakdown-calc">
+			<div class="breakdown-calc--sum">
+				<div class="breakdown-calc--item">
+					<h4 class="calc-item--title"
+						data-self-text="<%- self_breakdown_cost_eng %>" 
+						data-else-text="<%- someoneElse_breakdown_cost_eng %>"></h4> 
+					<svg viewBox="0 0 59.657 56" class="results-icon" data-fallback="img/icon_living.png">
+					  <use xlink:href="#icon-living"></use>
+					</svg>
+
+					<span class="calc-item--sum calc-item--sum__living"><span class="calc-item--eqauls">=</span><span class="calc-item--val__living"></span> <small>a week</small></span>
+				</div>
+				<span class="breakdown-calc--plus">+</span>
+				<div class="breakdown-calc--item">
+					<h4 class="calc-item--title"
+						data-self-text="<%- self_breakdown_care_eng %>" 
+						data-else-text="<%- someoneElse_breakdown_care_eng %>"></h4> 
+					<svg viewBox="0 0 59.657 56" class="results-icon" data-fallback="img/icon_care.png">
+					  <use xlink:href="#icon-care"></use>
+					</svg>
+
+					<span class="calc-item--sum calc-item--sum__care"><span class="calc-item--eqauls">=</span><span class="calc-item--val__care"></span> <small>a week</small></span>
+				</div>	
+			</div>
+			<span class="breakdown-calc--total"><span class="calc-item--val__total"></span> <small>a week</small></span>
+		</div>
+
+		<div class="breakdown-desc">
+			<p class="breakdown-desc--text"
+				data-self-text="<%- self_explainer_eng %>" 
+				data-else-text="<%- someoneElse_explainer_eng %>">
+			</p>
+			<h3 class="result-page--header">How do independent sector and council rates compare?</h3>
+			<p class="breakdown-desc--col breakdown-desc--col__first">
+				<span class="breakdown-desc__amount"><span class="breakdown-desc__amount__private"></span> <small>a week</small></span><br/>
+				<span data-self-text="<%- self_reg_ind_avg_strap_eng %>" 
+					  data-else-text="<%- someoneElse_reg_ind_avg_strap_eng %>"
+					  data-updating-el="true">
+					<%= self_reg_ind_avg_strap_eng %>
+				</span>
+			</p>
+			<p class="breakdown-desc--col">
+				<span class="breakdown-desc__amount"><span class="breakdown-desc__amount__region"></span> <small>a week</small></span><br/>
+
+				<span data-self-text="<%- self_reg_avg_strap_eng %>" 
+					  data-else-text="<%- someoneElse_reg_avg_strap_eng %>"
+					  data-updating-el="true">
+					<%= self_reg_avg_strap_eng %>
+				</span>
+			</p>
+
+
+		</div>
+
+		<h4 class="cap--header"
+			data-self-text="<%- self_results_eng_4_a %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_a %>">
+		  	<%= self_results_eng_4_a %>
+		</h4>
+		<p class="cap--p"
+			data-self-text="<%- self_results_eng_4_b %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_b %>">
+			<%= self_results_eng_4_b %>
+		</p>
+		<p class="cap--p"
+			data-self-text="<%- self_results_eng_4_c_i %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_c_i %>">
+			<%= self_results_eng_4_c_i %>
+		</p>
+		<p class="cap--p"
+			style="display: none"
+			data-self-text="<%- self_results_eng_4_c_ii %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_c_ii %>">
+			<%= self_results_eng_4_c_ii %>
+		</p>
+		<p class="cap--p"
+			style="display: none"
+			data-self-text="<%- self_results_eng_4_d %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_d %>">
+			<%= self_results_eng_4_c_ii %>
+		</p>
+		<p class="cap--p"
+			data-self-text="<%- self_results_eng_4_d %>" 
+		  	data-else-text="<%- someoneElse_results_eng_4_d %>">
+			<%= self_results_eng_4_d %>
+		</p>
+	</div>
+	<div class="more-details-btn">
+		Show more detail
+	</div>
+	<div class="more-details">
+		<div class="more-details--wrapper">
+			<h4 class="more-details--header"
+				data-self-text="<%- self_results_eng_5_a %>" 
+			  	data-else-text="<%- someoneElse_results_eng_5_a %>">
+			  	<%= self_results_eng_5_a %>
+			</h4>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_5_b %>" 
+			  	data-else-text="<%- someoneElse_results_eng_5_b %>">
+				<%= self_results_eng_5_b %>
+			</div>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_5_c %>" 
+			  	data-else-text="<%- someoneElse_results_eng_5_c %>">
+				<%= self_results_eng_5_c %>
+			</div>
+
+			<h4 class="more-details--header"
+				data-self-text="<%- self_results_eng_6_a %>" 
+			  	data-else-text="<%- someoneElse_results_eng_6_a %>">
+			  	<%= self_results_eng_6_a %>
+			</h4>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_6_b %>" 
+			  	data-else-text="<%- someoneElse_results_eng_6_b %>">
+				<%= self_results_eng_6_b %>
+			</div>
+
+			<h4 class="more-details--header"
+				data-self-text="<%- self_results_eng_7_a %>" 
+			  	data-else-text="<%- someoneElse_results_eng_7_a %>">
+			  	<%= self_results_eng_7_a %>
+			</h4>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_7_b %>" 
+			  	data-else-text="<%- someoneElse_results_eng_7_b %>">
+				<%= self_results_eng_7_b %>
+			</div>
+			<h4 class="more-details--header"
+				data-self-text="<%- self_results_eng_3_a %>" 
+			  	data-else-text="<%- someoneElse_results_eng_3_a %>">
+			  	<%= self_results_eng_3_a %>
+			</h4>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_3_b %>" 
+			  	data-else-text="<%- someoneElse_results_eng_3_b %>">
+				<%= self_results_eng_3_b %>
+			</div>		
+			<h4 class="more-details--header"
+				data-self-text="<%- self_results_eng_8_a %>" 
+			  	data-else-text="<%- someoneElse_results_eng_8_a %>">
+			  	<%= self_results_eng_8_a %>
+			</h4>
+			<div class="more-details--p"
+				data-self-text="<%- self_results_eng_8_b %>" 
+			  	data-else-text="<%- someoneElse_results_eng_8_b %>">
+				<%= self_results_eng_8_b %>
+			</div>
+
+		</div>
+		<div class="compare">
+			<div class="compare--inner">
+				<svg viewBox="0 0 59.657 56" class="compare-icon" data-fallback="img/icon_house.png">
+				  <use xlink:href="#icon-home-grey"></use>
+				</svg>
+
+				<h4 class="compare--header"
+					data-self-text="<%- self_results_compare_header %>" 
+				  	data-else-text="<%- someoneElse_results_compare_header %>">
+			  		<%= self_results_compare_header %>
+			  	</h4>
+				<p class="compare--desc"
+					data-self-text="<%- self_results_compare_desc %>" 
+				  	data-else-text="<%- someoneElse_results_compare_desc %>">
+				  	<%= self_results_compare_desc %>
+				 </p>
+				<p class="compare--total"><span class="compare--total__val"></span> <small>a week</small></p>
+			</div>
+		</div>
+	</div>
+	<div class="more-details-btn more-details-btn__bottom">
+		Show more detail
+	</div>
+	<p class="nation--p">
+		*Source: <a href="http://www.laingbuisson.co.uk/" target="_top">LaingBuisson</a>
+	</p>
+	<h3 class="nation--header__links">
+		Where can I find more information?
+	</h3>
+	<ul class="nation-links">
+		<li><a href="https://www.gov.uk/government/topics/social-care" target="_top">Department of Health</a></li>
+		<li><a href="http://www.cqc.org.uk/" target="_top">Care Quality Commission</a></li>
+		<li><a href="http://www.independentage.org/" target="_top">Independent Age</a></li>
+		<li><a href="http://www.ageuk.org.uk/" target="_top">Age UK</a></li>
+		<li><a href="http://www.alzheimers.org.uk/" target="_top">Alzheimer’s Society</a></li>
+		<li><a href="http://www.parkinsons.org.uk/" target="_top">Parkinson's UK</a></li>
+		<li><a href="http://www.contact-the-elderly.org.uk/" target="_top">Contact the Elderly</a></li>
+	</ul>
+</div>
+

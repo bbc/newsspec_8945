@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Padauk';
+    src: url('http://www.bbc.co.uk/worldservice/fonts/burmese/final/Padauk5.eot');
+    src: local('☺'), url('http://www.bbc.co.uk/worldservice/fonts/burmese/final/Padauk1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Padauk';
+    src: url('http://www.bbc.co.uk/worldservice/fonts/burmese/final/Padauk5.eot');
+    src: local('☺'), url('http://www.bbc.co.uk/worldservice/fonts/burmese/final/Padauk-bold2.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family:Padauk, arial, verdana;
+}

@@ -1,0 +1,62 @@
+    <div class="footer"><div class="footer--logo"></div></div>
+    <script>
+        var browserType = null;
+        if ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+            browserType = 'html5';
+        }
+        else if (
+          (document.documentMode && (document.documentMode < 9)) ||
+          (/MSIE (7)/.test(navigator.userAgent))
+        ) {
+            browserType = 'legacyie';
+            document.write('<scr' + 'ipt src="<%= pathStatic %>/<%= vocab_dir %>/js/lib/vendors/legacy-ie-polyfills.js"></scr' + 'ipt>');
+        }
+        if (browserType) {
+            var debugMode = setDebugMode(),
+                settings  = getSettings(browserType, debugMode),
+                done      = false,
+                script    = document.createElement('script');
+            script.src = "<%= pathStatic %>/<%= vocab_dir %>/js/lib/vendors/require/require-2.1.0.js";
+            script.type = "text/javascript";
+            script.onload = script.onreadystatechange = function() {
+                if ( !done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") ) {
+                    done = true;
+                    require.config(settings.requireConfig);
+                    require([settings.moduleToStartApp], function () {
+                        require(['app'], function (app) {
+                            app.init('<%= storyPageUrl %>');
+                        });
+                    });
+                }
+            }
+            document.body.appendChild(script);
+        }
+        function setDebugMode() {
+            var debugForced = window.location.href.match(/debug=true/);
+            if (debugForced) {
+                return true;
+            }
+            return <%= debug %>;
+        }
+        function getSettings(browserType, debug) {
+            var config = {
+                    urlArgs: "v=<%= version %>"
+                },
+                moduleToStartApp = '<%= pathStatic %>/<%= vocab_dir %>/js/all-'+browserType+'.js';
+
+            if (debug) {
+                var jqueryVersion   = (browserType === 'html5') ? 'jquery-2.0.3' : 'jquery-1.9.1';
+                config.baseUrl      = "<%= pathStatic %>/<%= vocab_dir %>/js/";
+                config.paths        = <%= amdModulePaths %>;
+                config.paths.jquery = './lib/vendors/jquery/' + jqueryVersion;
+                config.paths.app    = './app';
+                moduleToStartApp    = '<%= pathStatic %>/<%= vocab_dir %>/js/app.js';
+            }
+            return {
+                requireConfig: config,
+                moduleToStartApp: moduleToStartApp
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.weeklyAvgHolder {
+	
+	padding-top: 2em;
+	width:100%;
+	overflow: hidden;
+
+	h4 {
+		max-width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 28px;
+	}
+
+	.weeklyAvgHolder--cap-header{
+		text-align: center;
+		width: 90%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.weeklyAvgHolder--cap-info{
+		text-align: center;
+		width: 90%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding:1em 10px 2em;
+	}
+	.weeklyAvgHolder-wrapper{
+		max-width: 320px;
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+		clear: both;
+
+		.weeklyAvgHolder--item {
+			@include box-sizing();
+			float: left;
+			width: 44%;
+			text-align: center;
+			margin:0;
+			padding:0;
+		
+
+			.weeklyAvgHolder--item__price{
+				font-weight: bold;
+				font-size: 2em;
+				color: #0c8280;
+			}
+		}
+
+		.weeklyAvgHolder--item + .weeklyAvgHolder--item {
+			padding-left: 6%;
+			margin-left: 4%;
+			border-left: 1px solid #404040;
+		}	
+	}
+
+	.weeklyAvgHolder--info{
+		text-align: center;
+	}
+
+}
+
+.hideWeeklyCostsResults {
+	display: none;
+	@include opacity(0);
+}

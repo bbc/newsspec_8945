@@ -1,0 +1,288 @@
+@include respondMinMax(310px, false){
+	.whoForHolder .questionsBtnsHolder{
+		width: 304px;
+
+		.questionsBtnsHolder--btn{
+			float: left;
+			clear: none;
+			margin: 0 4px 0 0;
+			border: 0;
+			width: 149px;
+		}
+
+		.questionsBtnsHolder--btn + .questionsBtnsHolder--btn{
+			margin-right: 0;
+		}
+	}
+
+}
+
+@include respondMinMax(624px, false){
+	.meansTestHolder .questionsAndProgressHolder {
+
+		.questionsBoxesHolder{
+			width: 62.903225806452%;
+
+			.questionBoxHolder{
+				height: 269px;
+				padding: 0 5%;
+			}
+		}
+		
+		.mobile-help{
+			display: none;
+		}
+
+		.progress-box{
+			display: block;
+		}
+
+	}
+
+	.result-page .result-total .result-total--summary{
+		width: 70%;
+	}
+}
+
+@include respondMinMax(764px, false){
+	.meansTestHolder .questionsAndProgressHolder {
+
+		.questionsBoxesHolder{
+			width: 47.560975609756%;
+		}
+
+		.progress-box{
+			width: 50%;
+			border: 1px solid #e5e5e5;
+
+			.bar-holder, .progress-titles, .progress-box--top{
+				display: block;
+			}
+
+			.progress-box--info{
+				margin-top: 21px;
+				height: 146px;
+			}
+
+		}
+	}
+
+	.nation{
+		.nation--header{ 
+			margin: 20px auto;
+		}
+
+		.nation--p{
+			max-width: 650px;
+			width: 100%;
+		}
+		.residential-explainer{
+			max-width: 650px;
+			width: 100%;
+		}
+		.nation--header__links, .nation-links{
+			max-width: 720px;
+			width: 100%;
+		}
+		.columns{
+			.columns__2-column{
+				float: left;
+				width: 50%;
+				margin: 0;
+				border-bottom: 0;
+				max-width: initial;
+
+				.column--header{
+					max-width: none;
+					font: normal 20px Arial;
+				}
+			}
+
+			.columns__2-column__border{
+				border-right: 1px solid #bebfbf;
+			}
+
+			.columns__3-column{
+				float: left;
+				width: 33%;
+				margin: 0;
+
+				.column--text-wrap{
+					max-width: 160px;
+				}
+			}
+
+			.columns__3-column__border{
+				border-left: 1px solid #bebfbf;
+				border-right: 1px solid #bebfbf;
+			}
+		}
+
+		.ast-info{
+			margin: 30px auto; 
+		}
+
+		.cost-breakdown{
+			margin: 30px auto;
+		}
+
+	}
+
+	.result-page {
+		.result-total .result-total--summary{
+			width: 53%;
+		}
+
+		.results-chart .results-chart--chart{
+			margin: 20px auto;
+			width: 670px;
+			height: 200px;
+			position: relative;
+			clear: both;
+			overflow: hidden;
+
+			.chart--first-text{
+				text-align: right;
+				width: 150px;
+				position: absolute;
+				top: 33px;
+				left: 0;
+			}
+			.chart--last-text{
+				text-align: left;
+				position: absolute;
+				top: 33px;
+				left: 510px;
+			}
+
+			.chart-desc{
+				position: absolute;
+				top: 160px;
+				left: 240px;
+				font: 16px Arial;
+			}
+
+			.chart--arrow{
+				position: absolute;
+				height: 63px;
+			}
+
+			.chart--arrow__first{
+				@include rotate(270);
+				-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";/*for ie8*/
+				top: 40px;
+				left: 200px;
+			}
+			.chart--arrow__last{
+				top: 40px;
+				left: 448px;
+				@include rotate(90);
+				-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";/*for ie8*/
+			}
+
+			.chart--svg{
+				position: absolute;
+				top: 0;
+				left: 255px;
+				float: left;
+			}
+
+			.chart--svg--alternative{
+				position: absolute;
+				top: 0;
+				left: 255px;
+				float: left;
+			}
+
+		}
+
+		.result-breakdown{
+			.results-icon{
+				margin-left: 0;
+			}		
+
+			.breakdown-calc{
+
+				.breakdown-calc--sum{
+					.breakdown-calc--item{
+						width: 260px;
+						clear: none;
+
+						.calc-item--title{
+							font: bold 24px Arial;
+							text-transform: none;
+						}
+					}
+
+					.breakdown-calc--plus{
+						margin: 15px 40px 10px 0;
+						clear: none;
+						float: left;
+					}
+				}
+
+				.breakdown-calc--total{
+					margin-left: 40px;
+					margin-right: 40px;
+				}
+
+			}
+
+			.breakdown-desc{
+				.breakdown-desc--col{
+					float: left;
+					width: 40%;
+					margin-left: 20%;
+					text-align: left;
+					max-width: none;
+				}
+
+				.breakdown-desc--col__first{
+					margin-left: 0;
+				}
+			}
+		}
+
+		.more-details{
+			text-align: left;
+
+			.more-details--wrapper .more-details--header{
+				text-align: center;
+				padding-left: 70px;
+				padding-right: 70px;
+			}
+
+			.compare .compare--inner{
+				overflow: hidden;
+				width: 510px;
+				margin: 10px auto;
+				.compare-icon{
+					float: left;
+				}
+
+				.compare--header{
+					display: none;
+				}
+
+				.compare--desc{
+					margin: 5px;
+					width: 280px;
+					float: left;
+				}
+				.compare--total{
+					margin-top: 10px;
+					float: left;
+				}
+
+			}
+
+		}
+
+		.more-details-btn{
+			width: 600px;
+			margin: 5px auto;
+		}
+	}
+
+
+}

@@ -1,0 +1,31 @@
+@mixin box-sizing() {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin opacity($val) {
+	/* IE 8 */
+	$ieval: ($val * 100);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ieval})";
+
+	/* IE 5-7 */
+	filter: alpha(opacity=#{$ieval});
+
+	/* Netscape */
+	-moz-opacity: $val;
+
+	/* Safari 1.x */
+	-khtml-opacity: $val;
+
+	/* Good browsers */
+	opacity: $val;
+
+}
+
+@mixin rotate($val) {
+	-webkit-transform: rotate(#{$val}deg); 
+	-moz-transform: rotate(#{$val}deg); 
+	-o-transform: rotate(#{$val}deg);
+	-ms-transform: rotate(#{$val}deg); 
+	transform: rotate(#{$val}deg);
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "BBCNassim";
+    src: url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.eot");
+    src: local("☺"),
+        url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.woff") format("woff"),
+        url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BBCNassim";
+    src: url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.eot");
+    src: local("☺"),
+        url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.woff") format("woff"),
+        url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family:BBCNassim, arial, verdana, sans-serif;
+}

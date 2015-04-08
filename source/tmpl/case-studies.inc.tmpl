@@ -1,0 +1,144 @@
+<!-- Newsspec_newsspec_8945 -->
+<div id="newsspec_8945--case_studies" class="case-studies">
+    <h2 class="case-studies--header">Case studies</h2>
+    <div class="newsspec_video_wrapper" style="max-width: 320px;">
+        <div class="newsspec_video" 
+            style="max-height: 240px;" 
+            data-playlist="http://playlists.bbc.co.uk/news/health-30919511A/playlist.sxml"
+                        data-autoplay="false"
+                        data-product="news"
+        ></div>
+        <div class="newsspec_video--desc">We've spent all our savings</div>
+    </div>
+    <div class="newsspec_video_wrapper" style="max-width: 320px;">
+        <div class="newsspec_video" 
+            style="max-height: 240px;" 
+            data-playlist="http://playlists.bbc.co.uk/news/health-30896696A/playlist.sxml"
+                        data-autoplay="false"
+                        data-product="news"
+        ></div>
+        <div class="newsspec_video--desc">Planning for my care</div>
+    </div>
+    <div class="newsspec_video_wrapper" style="max-width: 320px;">
+        <div class="newsspec_video" 
+            style="max-height: 240px;" 
+            data-playlist="http://playlists.bbc.co.uk/news/health-30896697A/playlist.sxml"
+                        data-autoplay="false"
+                        data-product="news"
+        ></div>
+        <div class="newsspec_video--desc">Day in the life of a care home</div>
+    </div>
+</div>
+<style>
+.case-studies{
+    display: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+.newsspec_video_wrapper{
+    margin: auto;
+}
+
+.newsspec_video--desc {
+    color: #FFF;
+    background-color: #D2700F;
+    padding: 17px 11px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.case-studies .newsspec_video--fixed{
+    float: left;
+    width: 32%!important;
+    margin-right: 1%;
+}
+.newsspec_video {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.case-studies--header{
+    font: bold 24px Arial;
+    -webkit-font-smoothing: auto;
+}
+
+.newsspec_video:after { 
+    padding-top: 75%; /*16:9 ratio*/
+    display: block;
+    content: "";
+}
+
+.newsspec_video .ns_media_content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+</style>
+
+<script>
+    (function () {
+    var isMobile = (!!window.bbcNewsResponsive),
+        baseUrl = 'http://www.bbc.co.uk/news/special/shared/video/v2',
+        config = {
+            paths: {
+                'js': baseUrl,
+                'bump-3': 'http://emp.bbci.co.uk/emp/bump-3/bump-3',
+                'js/bootstrap': isMobile ? baseUrl + '/bootstrap' : baseUrl + '/bootstrap-desktop'
+            }
+        },
+        news;
+
+    require(config, ['js/bootstrap'], function (bootstrap) {
+        news = bootstrap;
+        // wait until the page has downloaded
+        news.$(function () {
+            if (weHaveNotLoadedTheVideosYet()) {
+                loadTheVideos();
+            }
+        });
+    });
+
+    function weHaveNotLoadedTheVideosYet() {
+        if (news.$('.newsspec_video_script_has_loaded').length === 0) {
+            // add the element to stop the script executing multiple times
+            news.$('body').append('<div class="newsspec_video_script_has_loaded"></div>');
+            return true;
+        }
+        return false;
+    }
+
+    function loadTheVideos() {
+        if (isMobile) {
+            loadVids();
+        } else {
+            loadFixedWidthVids();
+        }
+    }
+
+    function loadVids() {
+        require(config, ['js/module/app'], function (app) {
+            app.init(); 
+        });        
+    }
+
+    function loadFixedWidthVids() {
+        require(config, ['js/bootstrap'], function (news) {
+
+            // wrap the video in a fixed width container
+            news.$('.newsspec_video_wrapper').each(function () {
+                var forceWidth = news.$(this).css('max-width');
+                news.$(this).wrap('<div class="newsspec_video--fixed" style="width: ' + forceWidth + '"></div>');
+            });
+
+            loadVids();
+        });
+    }
+})();
+</script>

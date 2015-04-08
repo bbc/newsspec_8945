@@ -1,0 +1,76 @@
+.postcodeFinderHolder {
+	width:100%;
+	background-color:$selectedBoxBgColor;
+	text-align:center;
+	padding:1em 8px;
+	
+
+	.postcodeFormHolder {
+		filter: inherit;
+		display: inline-block;
+		width:100%;
+		max-width:310px;
+		vertical-align:top;
+
+		.postcodeFormEl {
+			@include box-sizing();
+			width:100%;
+			text-align: left;
+			padding-right:115px;
+			position: relative;
+			filter: inherit;
+
+			.postcodeFormInputEl {
+				@include box-sizing();
+				width: 100%;
+				background-color:#fff;
+				border: 1px solid #333;
+				padding: 5px;
+				filter: inherit;
+			}
+
+			.postcodeFormSubmitBtnEl {
+				@include box-sizing();
+				width: 110px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				border:none;
+				padding: 6px 0;
+				background-color:$btnBgColor;
+				font: bold 16px Arial;
+				color: #FFF;
+				filter: inherit;
+
+			}
+		}
+
+		h4 {
+			text-align: left;
+			padding-bottom: 0.5em;
+			filter: inherit;
+		}
+
+
+		.postcodeErrorHolder {
+			margin-top: 15px;
+			padding: 0;
+			filter: inherit;
+			
+			p {
+				@include box-sizing();
+				text-align: left;
+				width:100%;
+				max-width:372px;
+				margin: 0 auto;
+				font: normal 16px Arial;
+				color: $errorFontColor;
+				filter: inherit;
+			}
+		}
+	}
+}
+
+.hidePostcodeError {
+	display: none;
+}

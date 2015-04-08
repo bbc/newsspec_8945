@@ -1,0 +1,23 @@
+@font-face {
+	font-family:"Iskoola Pota BBC";
+	src: url("/worldservice/fonts/sinhala/1652d40f-6c9e-4304-9d3b-8cf062f90bfd.eot?iefix") format("eot");
+}
+@font-face {
+	font-family:"Iskoola Pota BBC";
+	/* src:url("/worldservice/fonts/sinhala/1652d40f-6c9e-4304-9d3b-8cf062f90bfd.eot?iefix");
+	src:local("☺"),*/
+	src:url("/worldservice/fonts/sinhala/271f3164-58bc-41d7-9c36-b65a248f2c7e.woff") format("woff"),url("/worldservice/fonts/sinhala/a97c3556-4ef2-49c9-aee3-451100797b1e.ttf") format("truetype");
+}
+@font-face {
+	font-family:"Iskoola Pota Bold BBC";
+	src: url("/worldservice/fonts/sinhala/fa33fa1c-a720-41a8-be54-5047fd991502.eot?iefix") format("eot");
+}
+@font-face {
+	font-family:"Iskoola Pota Bold BBC";
+	/* src:url("/worldservice/fonts/sinhala/fa33fa1c-a720-41a8-be54-5047fd991502.eot?iefix");
+	src:local("☺"),*/
+	src:url("/worldservice/fonts/sinhala/ae9520e7-1e03-414b-9c2d-ea03ddef9b14.woff") format("woff"),url("/worldservice/fonts/sinhala/6b3af59d-729a-4211-9771-aa0a94301ef2.ttf") format("truetype");
+}
+body {
+	font-family:'SETTdeco Family';
+}

@@ -1,0 +1,23 @@
+.main{
+	display: none;
+	padding: 0 10px;
+}
+.hiddenElement{
+	display: none;
+}
+
+.faddedElement{
+	@include opacity(0.2);
+	position: relative;
+}
+
+.faddedElement::after {
+	display: block;
+	cursor: initial;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: ' ';
+}

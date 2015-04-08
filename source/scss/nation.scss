@@ -1,0 +1,164 @@
+.nation--header__links{
+	width: 85%;
+	margin: 20px auto;
+	padding: 13px 8px;
+	border-top: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+
+	font: bold 24px Arial;
+	color: #404040;
+}
+.nation-links{
+	width: 85%;
+	margin: 20px auto;
+	list-style: none;
+	padding: 0;
+
+	li{
+		margin: 0;
+		padding: 0;
+
+		a {
+			font: bold 16px Arial;
+			color: #1f4f82;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.nation--p{
+	width: 80%;
+	margin: 20px auto;
+	text-align: left;
+
+	strong {
+		color: #007f7f;
+	}
+
+		a {
+			font-weight: bold;
+			color: #1f4f82;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+}
+
+.nation{
+	display: none;
+	color: $mainFontColor;
+
+	.text-small{
+		font: normal 16px Arial;
+	}	
+	.text-medium{
+		font: normal 20px Arial;
+	}
+	.highlight-text-medium{
+		display: block;
+		margin: 8px 0;
+		font: bold 32px Arial;
+		text-align: center;
+		color: #0c8280;
+	}
+	.highlight-text-large{
+		display: block;
+		margin: 15px 0;
+		font: bold 40px Arial;
+		text-align: center;
+		color: #0c8280;
+	}
+	.text-left{
+		text-align: left !important;
+	}
+
+	.nation--header{
+		margin: 10px auto;
+		max-width: 425px;
+		font: bold 24px Arial;
+		text-align: center;
+	}
+	.nation--sub-header{
+		margin: 0;
+		font: bold 20px Arial;
+		text-align: center;
+	}
+	
+
+	.nation--p__alt{
+		display: none;
+	}
+
+	.nation--p__large{
+		color: #0c8280;
+		font: bold 32px Arial;
+		text-align: center;
+	}
+
+
+	.columns{
+		clear: both;
+		overflow: hidden;
+		margin: 0 auto;
+		max-width: 830px;
+
+		.columns__2-column{
+			text-align: center;
+			width: 100%;
+			max-width: 230px;
+			margin: 0 auto;
+			padding: 20px 0;
+
+			.column--header{
+				display: inline-block;
+				max-width: 200px;
+				font: bold 20px Arial;
+			}
+
+			.column--text-wrap{
+				max-width: 260px;
+				margin: 0 auto;
+			}
+		}
+
+		.columns__2-column__border{
+			border-bottom: 1px solid #bebfbf;
+		}
+
+		.columns__3-column{
+			padding: 10px;
+			text-align: center;
+			width: 100%;
+			margin: 10px 0;
+
+			.column--text-wrap{
+				display: inline-block;
+				max-width: 280px;
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	.ast-info{
+		font: bold 16px Arial;
+		text-align: center;
+		margin: 15px auto;
+	}
+
+	.cost-breakdown{
+		margin: 30px auto;
+	}
+
+	.residential-explainer {
+		text-align: center;
+		width: 80%;
+		margin: 0 auto 28px;
+	}
+}

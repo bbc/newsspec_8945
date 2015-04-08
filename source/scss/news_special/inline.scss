@@ -1,0 +1,133 @@
+/*
+    This CSS gets added inline
+    into the index.html file
+*/
+body {
+    background: #fff;
+}
+
+.main {
+    max-width: 976px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1px 0 52px;
+    zoom: 1;
+}
+
+.onbbcdomain .main {
+    padding: 17px 0;
+}
+
+.masthead {
+    background: #900;
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.masthead__logo {
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.onbbcdomain .masthead {
+    display: none;
+}
+.tracking-image {
+    height: 1px;
+    position: absolute;
+    width: 1px;
+}
+.no-js-message {
+    background: red;
+    color: white;
+    display: block;
+    margin-top: -10px;
+    padding: 1em;
+    text-align: center;
+}
+
+.footer {
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    font-size: 12px;
+    height: 18px;
+    position: fixed;
+    right: 0;
+}
+
+.footer--logo {
+    background: url(css/f/bbc.png) no-repeat 13px 1px #900;
+    height: 100%;
+}
+
+.footer::after {
+    bottom: 0;
+    content: "©";
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 13px
+}
+
+.onbbcdomain .footer {
+    display: none;
+}
+.tracking-image {
+    height: 1px;
+    position: absolute;
+    width: 1px;
+}
+.no-js-message {
+    background: red;
+    color: white;
+    display: block;
+    margin-top: -10px;
+    padding: 1em;
+    text-align: center;
+}
+
+
+.masthead__logo--afrique    { background-image: url(css/f/bbc-afrique.png); }
+.masthead__logo--arabic     { background-image: url(css/f/bbc-arabic.png); }
+.masthead__logo--azeri      { background-image: url(css/f/bbc-azeri.png); }
+.masthead__logo--bengali    { background-image: url(css/f/bbc-bengali.png); }
+.masthead__logo--burmese    { background-image: url(css/f/bbc-burmese.png); }
+.masthead__logo--chinese    { background-image: url(css/f/bbc-chinese.png); }
+.masthead__logo--english    { background-image: url(css/f/bbc.png); }
+.masthead__logo--gahuza     { background-image: url(css/f/bbc-gahuza.png); }
+.masthead__logo--hausa      { background-image: url(css/f/bbc-hausa.png); }
+.masthead__logo--hindi      { background-image: url(css/f/bbc-hindi.png); }
+.masthead__logo--indonesia  { background-image: url(css/f/bbc-indonesia.png); }
+.masthead__logo--kyrgyz     { background-image: url(css/f/bbc-kyrgyz.png); }
+.masthead__logo--mundo      { background-image: url(css/f/bbc-mundo.png); }
+.masthead__logo--nepali     { background-image: url(css/f/bbc-nepali.png); }
+.masthead__logo--pashto     { background-image: url(css/f/bbc-pashto.png); }
+.masthead__logo--persian    { background-image: url(css/f/bbc-persian.png); }
+.masthead__logo--portuguese { background-image: url(css/f/bbc-portuguese.png); }
+.masthead__logo--rusian     { background-image: url(css/f/bbc-rusian.png); }
+.masthead__logo--sinhala    { background-image: url(css/f/bbc-sinhala.png); }
+.masthead__logo--somali     { background-image: url(css/f/bbc-somali.png); }
+.masthead__logo--swahili    { background-image: url(css/f/bbc-swahili.png); }
+.masthead__logo--tamil      { background-image: url(css/f/bbc-tamil.png); }
+.masthead__logo--tajik      { background-image: url(css/f/bbc-tajik.png); }
+.masthead__logo--turkce     { background-image: url(css/f/bbc-turkce.png); }
+.masthead__logo--urdu       { background-image: url(css/f/bbc-urdu.png); }
+.masthead__logo--ukchina    { background-image: url(css/f/bbc-ukchina.png); }
+.masthead__logo--ukrainian  { background-image: url(css/f/bbc-ukrainian.png); }
+.masthead__logo--uzbek      { background-image: url(css/f/bbc-uzbek.png); }
+.masthead__logo--vietnamese { background-image: url(css/f/bbc-vietnamese.png); }
+
+html[lang="ar"],
+html[lang="fa"],
+html[lang="ps"],
+html[lang="ur"] {
+    body{
+        direction: rtl;
+    }
+}

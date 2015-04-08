@@ -1,0 +1,1 @@
+define(function () {return [320, 640, 1024]; });

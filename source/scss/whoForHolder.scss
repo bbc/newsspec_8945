@@ -1,0 +1,51 @@
+.whoForHolder{
+	width: 100%;
+	padding: 0 8px;
+	overflow: hidden;
+
+	h4{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.questionsBtnsHolder{
+		width: 100%;
+		margin: 20px auto;
+		overflow: hidden;
+
+		.questionsBtnsHolder--btn{
+			float: left;
+			outline: 0;
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			height: 40px;
+			cursor: pointer;
+			border: 0;
+
+			text-align: center;
+			font: bold 16px Arial;
+			background-color: $btnDefaultBgColor;
+			color: $mainFontColor;
+
+			/* Disable text selection */
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.questionsBtnsHolder--btn:hover, .questionsBtnsHolder--btn:focus{
+			background-color: $btnHoverBgColor;
+			color: #FFF;
+		}
+
+		.questionsBtnsHolder--btn__selected, .questionsBtnsHolder--btn__selected:hover, .questionsBtnsHolder--btn__selected:focus{
+			background-color: $btnSelectedBgColor;
+			color: #FFF;
+		}
+	}
+}

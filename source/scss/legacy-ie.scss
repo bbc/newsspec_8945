@@ -1,0 +1,7 @@
+$fix-mqs: 1024px;
+
+@import "main";
+.chart--arrow__first,
+.chart--arrow__last {
+    display: none;
+}

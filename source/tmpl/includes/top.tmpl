@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><%
+
+var translations = {
+	afrique: {
+		lang: "fr",
+		name: "afrique"
+	},
+	arabic: {
+		lang: "ar",
+		name: "arabic"
+	},
+	arabic_1024: {
+		lang: "ar",
+		name: "arabic"
+	},
+	azeri: {
+		lang: "az",
+		name: "azeri"
+	},
+	bengali: {
+		lang: "bn",
+		name: "bengali"
+	},
+	brasil: {
+		lang: "pt-BR",
+		name: "portuguese"
+	},
+	burmese: {
+		lang: "my",
+		name: "burmese"
+	},
+	chinese_simp: {
+		lang: "zh-Hans",
+		name: "chinese"
+	},
+	chinese_trad: {
+		lang: "zh-Hans",
+		name: "chinese"
+	},
+	english: {
+	    lang: "en",
+	    name: "english"
+	},
+	gahuza: {
+		lang: "rw",
+		name: "gahuza"
+	},
+	greatlakes: {
+		lang: "ha",
+		name: "hausa"
+	},
+	hausa: {
+		lang: "ha",
+		name: "hausa"
+	},
+	hindi: {
+		lang: "hi",
+		name: "hindi"
+	},
+	indonesia: {
+		lang: "id",
+		name: "indonesia"
+	},
+	kyrgyz: {
+		lang: "ky",
+		name: "kyrgyz"
+	},
+	mundo: {
+		lang: "es",
+		name: "mundo"
+	},
+	nepali: {
+		lang: "ne",
+		name: "nepali"
+	},
+	pashto: {
+		lang: "ps",
+		name: "pashto"
+	},
+	persian: {
+		lang: "fa",
+		name: "persian"
+	},
+	portuguese: {
+		lang: "pt-BR",
+		name: "portuguese"
+	},
+	russian: {
+		lang: "ru",
+		name: "rusian"
+	},
+	sinhala: {
+		lang: "si",
+		name: "sinhala"
+	},
+	somali: {
+		lang: "so",
+		name: "somali"
+	},
+	swahili: {
+		lang: "sw",
+		name: "swahili"
+	},
+	tamil: {
+		lang: "ta",
+		name: "tamil"
+	},
+	tajik: {
+		lang: "tg",
+		name: "tajik"
+	},
+	turkce: {
+		lang: "tr",
+		name: "turkce"
+	},
+	urdu: {
+		lang: "ur",
+		name: "urdu"
+	},
+	ukchina_simp: {
+		lang: "zh-Hans",
+		name: "ukchina"
+	},
+	ukchina_trad: {
+		lang: "zh-Hans",
+		name: "ukchina"
+	},
+	ukrainian: {
+		lang: "uk",
+		name: "ukrainian"
+	},
+	uzbek: {
+		lang: "uz",
+		name: "uzbek"
+	},
+	vietnamese: {
+		lang: "vi",
+		name: "vietnamese"
+	}
+};
+
+if (typeof 	translations[vocab_dir] === "undefined") {
+	vocab_dir = "english";
+}
+
+var logoModifier = translations[vocab_dir].name;
+
+%><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= translations[vocab_dir].lang %>" lang="<%= translations[vocab_dir].lang %>">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="content-language" content="<%= translations[vocab_dir].lang %>" />
+<meta http-equiv="Content-Type" content="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<%= inlineStyleElm %>
+<script>
+document.documentElement.className = "js";
+
+(function () {
+	var urlParam     = window.location.href.split('onbbcdomain=')[1],
+		hashtag      = urlParam.indexOf('#'),
+		onBbcDomain  = urlParam.substring(0, hashtag !== -1 ? hashtag : urlParam.length);
+
+	if (onBbcDomain === 'true') {
+	    document.documentElement.className += ' onbbcdomain';
+	}
+})();
+</script>
+<!--[if lt IE 9]>
+    <link type="text/css" rel="stylesheet" href="<%= pathStatic %>/<%= vocab_dir %>/css/legacy-ie.css?v=<%= version %>" />
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script>
+(function () {
+	function oldIE() {
+		return !!(document.documentMode && (document.documentMode < 9));
+	};
+	var styleSheet = oldIE() ? 'legacy-ie':'main';
+	document.write('<link href="<%= pathStatic %>/<%= vocab_dir %>/css/' + styleSheet + '.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />');
+})();
+</script>
+<noscript>
+	<link href="<%= pathStatic %>/<%= vocab_dir %>/css/main.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />
+</noscript>
+<!--<![endif]-->
+</head>
+<body>
+    <div class="masthead"><div class="masthead__logo masthead__logo--<%= logoModifier %>"></div></div>

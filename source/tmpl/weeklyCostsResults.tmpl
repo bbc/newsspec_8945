@@ -1,0 +1,45 @@
+<div class="weeklyAvgHolder hiddenElement">
+	<h3 class="weeklyAvgHolder--cap-header"
+		data-self-text="<%= self_england_header %>" 
+		data-else-text="<%= someoneElse_england_header %>"><%= self_england_header %></h3>
+	<div class="weeklyAvgHolder--cap-info" 
+		data-self-text="<%= self_England %>" 
+		data-else-text="<%= someoneElse_England %>">
+		<%= self_England %>
+	</div>
+
+	<h4 class="weeklyAvgHolder--header" 
+		data-self-text="<%= self_care_costs_header_h %>" 
+		data-else-text="<%= someoneElse_care_costs_header_h %>">
+		<%= self_care_costs_header_h %>
+	</h4>
+
+	<div class="weeklyAvgHolder-wrapper">
+		<div class="weeklyAvgHolder--item weeklyAvgHolder--item__residential">
+			<span 
+				class="item__residential"
+				data-self-text="<%= self_answer_2_h %>" 
+				data-else-text="<%= someoneElse_answer_2_h %>">
+				<%= self_answer_2_h %>
+			</span>
+			<br/>
+			<span class="weeklyAvgHolder--item__price">£XXX</span>
+		</div>
+		<div class="weeklyAvgHolder--item weeklyAvgHolder--item__at-home">
+			<span 
+				class="item__at-home"
+				data-self-text="<%= self_answer_1_h %>" 
+				data-else-text="<%= someoneElse_answer_1_h %>">
+				<%= self_answer_1_h %>
+			</span>
+			<br/>
+			<span class="weeklyAvgHolder--item__price">£YYY</span>
+		</div>
+	</div>
+
+	<p class="weeklyAvgHolder--info"
+	    data-self-text="<%= self_answer_footer %>" 
+	    data-else-text="<%= someoneElse_answer_footer %>">
+	    <%= self_answer_footer %>
+	</p>
+</div>

@@ -1,0 +1,22 @@
+@font-face {
+  font-family:mangal;
+  src: url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked/mangal_regular_linked.eot");
+  src: local("☺"),
+    url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked/mangal_regular_linked.woff") format("woff"),
+    url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked/mangal_regular_linked.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:mangal;
+  src: url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked_bold/mangal_bold_linked_bold.eot");
+  src: local("☺"),
+    url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked_bold/mangal_bold_linked_bold.woff") format("woff"),
+    url("http://www.bbc.co.uk/worldservice/fonts/nepali/mangal_linked_bold/mangal_bold_linked_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+	font-family:mangal, raghu, arial, verdana, sans-serif;
+}

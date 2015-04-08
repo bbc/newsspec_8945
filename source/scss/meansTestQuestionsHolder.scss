@@ -1,0 +1,257 @@
+.meansTestHolder {
+	padding-top: 3em;
+	position:relative;
+
+	.meansTestHolder-header {
+		text-align: center;
+		width: 90%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.meansTestHolder-info {
+		text-align: center;
+		width: 90%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding-top:1em;
+	}
+
+	.questionsAndProgressHolder {
+
+		position: relative;
+		width: 100%;
+		margin-top:2em;
+
+		.questionsBoxesHolder {
+			width: 100%;
+
+			.mobile-help{
+				border: 1px solid #f1f1f1;
+				margin-top: 3px;
+				padding: 14px 18px;
+
+				.mobile-help--title{
+					font: bold 18px Arial;
+				}
+
+				.mobile-help--info{
+					font: 16px Arial;
+					margin: 15px 0 0 0;
+				}
+
+			}
+
+			.mobile-help--5__skip{
+				display: none;
+			}
+
+			.mobile-help__active{
+				border: 0;
+				background-color: $tealColor;
+
+				.mobile-help--title, .mobile-help--info{
+					color: #fff;
+				}
+			}
+
+			.resultsBtn {
+				@include box-sizing();
+				width: 100%;
+				display: block;
+				border: 0;
+				outline: 0;
+				padding: 10px 0;
+				background-color: $btnBgColor;
+				text-align: center;
+				margin-top: 2em;
+				border-left: 8px solid #FFF;
+				border-right: 8px solid #FFF;
+				cursor: pointer;
+				color: #fff;
+				font: bold 16px Arial;
+			}
+
+			.resultsBtn:hover, .resultsBtn:focus{
+				background-color:#025757;
+			}
+
+			.resultsBtnSelectedAnswer {
+				background-color:#404040;
+				color: #fff;
+			}
+
+			.hideQuestion {
+				display: none;
+			}
+
+			.selectedQuestionBox {
+				background-color: $selectedBoxBgColor;
+			}
+
+			.unselectedQuestionBox {
+				background-color: $boxBgColor;
+			}
+
+			.questionBoxHolder:before{
+			    content: "";
+			    display: inline-block;
+			    vertical-align: middle;
+			    width: 0;
+			    margin-right: -.25em; /*might want to tweak this. .25em for extra white space */
+			    height: 100%;
+			}
+
+			.questionBoxHolder {
+				margin-top: 10px;
+				text-align: center;
+			    white-space: nowrap;
+			    padding: 15px 5%;
+
+				.questionBoxHolder--iner{
+					filter: inherit;
+					margin: auto 0;
+					width: 100%;
+				    display: inline-block;
+				    vertical-align: middle;
+				    white-space: normal;
+
+					.questionsIcon {
+						width: 50px;
+						height: 47px;
+					}
+
+				}
+			
+
+				h4 {
+					padding: 0.2em 0;
+				}
+
+				.questionsBtnsHolder {
+					padding-top:1em;
+
+					.questionBtn {
+						border: 0;
+						outline: 0;
+						font: bold 16px Arial;
+						display: inline-block;
+						@include box-sizing();
+						padding: 10px 0;
+						background-color: $btnDefaultBgColor;
+						width:49%;
+						cursor: pointer;
+					}
+					.questionBtn:hover, .questionBtn:focus {
+						color: #fff;
+						background-color: $btnHoverBgColor;
+					}
+
+					.questionBtnSelectedAnswer, .questionBtnSelectedAnswer:hover, .questionBtnSelectedAnswer:focus {
+						background-color: $btnSelectedMeansBgColor;
+						color: #fff;
+					}
+
+					.questionBtn + .questionBtn {
+						margin-left: 2%;
+					}
+
+				}
+
+				.questionsInputHolder {
+					position:relative;
+					filter: inherit;
+					@include box-sizing();
+					padding:1em 0 0 1.5em;
+					width: 90%;
+					margin: 0 auto;
+
+					.poundSymbol {
+						filter: inherit;
+						position:absolute;
+						bottom:0;
+						left: 0;
+					}
+
+					.questionsTextArea {
+						@include box-sizing();
+						filter: inherit;
+						width: 100%;
+						background-color: #fff;
+						border: 1px solid #333;
+						padding: 5px;
+						resize: none;
+					}
+
+					.questionsInputForm {
+						@include box-sizing();
+						filter: inherit;
+						width: 100%;
+						text-align: left;
+						padding-right:115px;
+						position: relative;
+
+						.questionsFormInputEl {
+							@include box-sizing();
+							filter: inherit;
+							width: 100%;
+							background-color:#fff;
+							border: 1px solid #333;
+							padding: 5px;
+						}
+
+						.questionsFormSubmitBtnEl {
+							@include box-sizing();
+							filter: inherit;
+							width: 110px;
+							position: absolute;
+							top: 0;
+							right: 0;
+							border:none;
+							padding: 6px 0;
+							background-color:$btnBgColor;
+							color: #fff;
+							font: bold 16px Arial;
+
+						}
+					}
+				}
+
+				.questionsInputHolder--income {
+					padding:0.5em 0 0 1.5em;
+				}
+
+				.questionExamplesHolder {
+					padding: 0.5em 0;
+					text-align: left;
+
+					.questionExampleHolder {
+						@include box-sizing();
+						padding: 0 3px;
+						margin: 0;
+						display: inline-block;
+						width:33.3%;
+						text-align: left;
+						vertical-align: top;
+
+						p {
+							font-size:0.875em;
+							padding: 0 0 5px 0;
+							margin: 0;
+							text-align: left;
+						}
+					}
+				}
+				.questionExamplesHolder--income {
+					padding: 0.5em 0 0 0;
+				}
+			}
+		}
+	}
+
+}
+
+.hideMeansTestQuestions {
+	@include opacity(0);
+	display:none;
+}

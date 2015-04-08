@@ -1,0 +1,253 @@
+<div class="meansTestHolder hiddenElement">
+	<h3 class="meansTestHolder-header" 
+		data-self-text="<%= self_eng_means_test_header %>" 
+		data-else-text="<%= someoneElse_eng_means_test_header %>"></h3>
+	<p class="meansTestHolder-info" 
+		data-self-text="<%= self_eng_means_test_text %>" 
+		data-else-text="<%= someoneElse_eng_means_test_text %>"></p>
+	
+	<div class="questionsAndProgressHolder">
+		<div class="questionsBoxesHolder">
+			<div class="questionBoxHolder meansTestBgColorAnim selectedQuestionBox">
+				<div class="questionBoxHolder--iner">
+					<div class="questionBoxHolder--iner">
+						<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_house.png">
+						  <use xlink:href="#icon-home"></use>
+						</svg>
+
+						<h4 data-self-text="<%= self_eng_q_1_m %>" 
+							data-else-text="<%= someoneElse_eng_q_1_m %>">
+							<%= self_eng_q_1_m %>
+						</h4>
+
+						<div class="questionsBtnsHolder">
+							<button class="questionBtn meansTestBgColorAnim" id="q1b1">YES</button><button class="questionBtn meansTestBgColorAnim" id="q1b2">NO</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+ 			<div class="mobile-help mobile-help__active">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_1_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_1_info_header %>">
+					<%= self_eng_q_1_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_1_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_1_info_text %>">
+					<%= self_eng_q_1_info_text %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_people.png">
+					  <use xlink:href="#icon-partner"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_2_m %>" 
+						data-else-text="<%= someoneElse_eng_q_2_m %>">
+						<%= someoneElse_eng_q_2_m %>
+					</h4>				
+					<div class="questionsBtnsHolder">
+						<button class="questionBtn meansTestBgColorAnim" id="q2b1">YES</button><button class="questionBtn meansTestBgColorAnim" id="q2b2">NO</button>
+					</div>
+				</div>
+			</div>
+
+ 			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_2_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_2_info_header %>">
+					<%= self_eng_q_2_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_2_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_2_info_text %>">
+					<%= self_eng_q_2_info_text %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_house_half.png">
+					  <use xlink:href="#icon-half-home"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_3_m %>" 
+						data-else-text="<%= someoneElse_eng_q_3_m %>">
+						<%= self_eng_q_3_m %>
+					</h4>
+					<div class="questionsBtnsHolder">
+						<button class="questionBtn meansTestBgColorAnim" id="q3b1">YES</button><button class="questionBtn meansTestBgColorAnim" id="q3b2">NO</button>
+					</div>
+				</div>
+			</div>
+
+ 			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_3_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_3_info_header %>">
+					<%= self_eng_q_3_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_3_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_3_info_text %>">
+					<%= self_eng_q_3_info_text %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_pound.png">
+					  <use xlink:href="#icon-money"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_4_n %>" 
+						data-else-text="<%= someoneElse_eng_q_4_n %>">
+						<%= self_eng_q_4_n %>
+					</h4>
+					<div class="questionsInputHolder">
+						<h3 class="poundSymbol">£</h3>
+						<form class="questionsInputForm" id="q4Form">
+							<input class="questionsFormInputEl" type="number"  min="0" max="9999999999999999"  min="0" max="9999999999999999" step="any" id="q4Input" />
+							<button class="questionsFormSubmitBtnEl" type="submit">Submit</button>
+						</form>
+					</div>
+					<div class="questions__numbererror">Please do not put commas in your figures</div>
+				</div>
+			</div>
+
+ 			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_4_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_4_info_header %>">
+					<%= self_eng_q_4_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_4_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_4_info_text %>">
+					<%= self_eng_q_4_info_text %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_moneybag.png">
+					  <use xlink:href="#icon-money-bag"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_5 %>" 
+						data-else-text="<%= someoneElse_eng_q_5 %>">
+						<%= self_eng_q_5 %>
+					</h4>
+					<div class="questionExamplesHolder" 
+						 data-self-examples="<%= self_eng_q_5_sub_head %>"
+						 data-else-examples="<%= someoneElse_eng_q_5_sub_head %>">
+						 <%= self_eng_q_5_sub_head %>
+					</div>
+					<div class="questionsInputHolder">
+						<h3 class="poundSymbol">£</h3>
+						<form class="questionsInputForm" id="q5Form">
+							<input class="questionsFormInputEl" type="number"  min="0" max="9999999999999999" step="any" id="q5Input" />
+							<button class="questionsFormSubmitBtnEl" type="submit">Submit</button>
+						</form>
+					</div>
+					<div class="questions__numbererror">Please do not put commas in your figures</div>
+				</div>
+			</div>
+
+			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_5_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_5_info_header %>">
+					<%= self_eng_q_5_info_header %>
+				</h2>
+				<p class="mobile-help--info mobile-help--5__no_skip"
+					data-self-text="<%= self_eng_q_5_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_5_info_text %>">
+					<%= self_eng_q_5_info_text %>
+				</p>
+				<p class="mobile-help--info mobile-help--5__skip"
+					data-self-text="<%= self_eng_q_5_info_text_skip %>" 
+					data-else-text="<%= someoneElse_eng_q_5_info_text_skip %>">
+					<%= self_eng_q_5_info_text_skip %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_moneybag_half.png">
+					  <use xlink:href="#icon-half-money-bag"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_6 %>" 
+						data-else-text="<%= someoneElse_eng_q_6 %>"></h4>
+					<div class="questionsBtnsHolder">
+						<button class="questionBtn meansTestBgColorAnim" id="q6b1">YES</button><button class="questionBtn meansTestBgColorAnim" id="q6b2">NO</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_6_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_6_info_header %>">
+					<%= self_eng_q_6_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_6_info_text_n %>" 
+					data-else-text="<%= someoneElse_eng_q_6_info_text_n %>">
+					<%= self_eng_q_6_info_text_n %>
+				</p>
+			</div>
+
+			<div class="questionBoxHolder faddedElement unselectedQuestionBox meansTestBgColorAnim">
+				<div class="questionBoxHolder--iner">
+					<svg viewBox="0 0 59.657 56" class="questionsIcon" data-fallback="img/icon_moneybag.png">
+					  <use xlink:href="#icon-money-bag"></use>
+					</svg>
+
+					<h4 data-self-text="<%= self_eng_q_7 %>" 
+						data-else-text="<%= someoneElse_eng_q_7 %>">
+						<%= self_eng_q_7 %>
+					</h4>
+					<div class="questionExamplesHolder questionExamplesHolder--income" 
+						 data-self-examples="<%= self_eng_q_7_sub_head %>"
+						 data-else-examples="<%= someoneElse_eng_q_7_sub_head %>">
+						 <%= self_eng_q_7_sub_head %>
+					</div>
+					<div class="questionsInputHolder questionsInputHolder--income">
+						<h3 class="poundSymbol">£</h3>
+						<form class="questionsInputForm" id="q7Form">
+							<input class="questionsFormInputEl" type="number"  min="0" max="9999999999999999" step="any" id="q7Input" />
+							<button class="questionsFormSubmitBtnEl" type="submit">Submit</button>
+						</form>
+					</div>
+					<div class="questions__numbererror questions__numbererror--income-info">Please do not put commas in your figures</div>
+					<div class="questions__numbererror questions__numbererror--income">Please enter a higher income, as most people will qualify for a state pension</div>
+				</div>
+			</div>
+
+			<div class="mobile-help faddedElement">
+				<h2 class="mobile-help--title"
+					data-self-text="<%= self_eng_q_7_info_header %>" 
+					data-else-text="<%= someoneElse_eng_q_7_info_header %>">
+					<%= self_eng_q_7_info_header %>
+				</h2>
+				<p class="mobile-help--info"
+					data-self-text="<%= self_eng_q_7_info_text %>" 
+					data-else-text="<%= someoneElse_eng_q_7_info_text %>">
+					<%= self_eng_q_7_info_text %>
+				</p>
+			</div>
+				
+
+			<button id="showResultsBtn" class="resultsBtn meansTestBgColorAnim faddedElement">Results</button>
+
+		</div>
+
+		<%= include("meansTestProgress.tmpl") %>
+	</div>
+</div>
