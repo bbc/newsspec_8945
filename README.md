@@ -1,6 +1,6 @@
 # Newsspec-8945
 
-Home or residential care calculator
+Home or residential care calculator - http://www.bbc.co.uk/news/health-30990913
 
 ## Getting started
 
