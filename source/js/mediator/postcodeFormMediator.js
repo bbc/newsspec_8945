@@ -55,25 +55,27 @@ define(['lib/news_special/bootstrap', 'model/eventStrs', 'model/northernIrelandT
             }
 
             this.errorMessageHolder.addClass('hidePostcodeError');
-            
-            var postcodeEntered = this.postcodeInputEl[0].value.replace(/\s/g, ''),
+
+            var postcodeEntered = this.postcodeInputEl[0].value.replace(/\s/g, '').toLowerCase(),
                 isPostcodeValid = this.isValidPostcode(postcodeEntered),
                 that = this,
-                postcodeURL;
+                postcodeURL,
+                postcodeAPIStartStr = 'http://open.live.bbc.co.uk/locator/locations/',
+                postcodeAPIEndStr = '/details/gss-council?op=intersect&vv=2&dv=1.1&format=json';
 
             if (isPostcodeValid) {
                 var isNorthernIrelandPostcode = this.isNorthernIrelandPostcode(postcodeEntered);
                 if (isNorthernIrelandPostcode) {
                     //look up a postcode from northern ireland!!
-                    postcodeURL = 'http://open.live.bbc.co.uk/locator/locations/' + postcodeEntered + '/details/gss-council?op=intersect&vv=2&dv=1.0&format=json';
+                    postcodeURL = postcodeAPIStartStr + postcodeEntered + postcodeAPIEndStr;
                     $.getJSON(postcodeURL).done(function (data) {
                         that.handleNIPostcodeResponse(data);
                     }).fail(this.handlePostcodeLoadError.bind(this));
 
-                    //var ajaxIt = news.$.getJSON(postcodeURL).done().fail(this.handlePostcodeLoadError.bind(this));  
+                    //var ajaxIt = news.$.getJSON(postcodeURL).done().fail(this.handlePostcodeLoadError.bind(this));
                 } else {
                     //look up the postcode!!
-                    postcodeURL = 'http://open.live.bbc.co.uk/locator/locations/' + postcodeEntered + '/details/gss-council?op=intersect&vv=2&format=json';
+                    postcodeURL = postcodeAPIStartStr + postcodeEntered + postcodeAPIEndStr;
                     $.getJSON(postcodeURL).done(function (data) {
                         that.handlePostcodeResponse(data);
                     }).fail(this.handlePostcodeLoadError.bind(this));
@@ -114,7 +116,7 @@ define(['lib/news_special/bootstrap', 'model/eventStrs', 'model/northernIrelandT
                     }
                 }
             }
-            
+
             if (externalId) {
                 //SUCCESS! :)
                 news.pubsub.emit(eventStrs.processExternalId, {
@@ -151,11 +153,11 @@ define(['lib/news_special/bootstrap', 'model/eventStrs', 'model/northernIrelandT
                         // console.log(trustInfo);
 
                         break;
-                        
+
                     }
                 }
             }
-            
+
             if (externalId) {
                 //SUCCESS! :)
                 news.pubsub.emit(eventStrs.processExternalId, {
@@ -201,7 +203,7 @@ define(['lib/news_special/bootstrap', 'model/eventStrs', 'model/northernIrelandT
             var isFullPostode = regex.test(postcode);
 
             if (!isFullPostode && postcode.length > 0 && postcode.length <= 4) {
-                
+
                 var firstChar = postcode.substr(0, 1), lastChar = postcode.substr(postcode.length - 1, 1);
 
                 var firstCharAlpha = /(?![qvxQVX])[a-zA-Z]/.test(firstChar), lastCharNumeric = /[0-9]/.test(lastChar);

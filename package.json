@@ -5,7 +5,7 @@
     "url": "http://github.com/BBCVisualJournalism/newsspec_8945"
   },
   "description": "Home or residential care calculator",
-  "version": "0.1.790",
+  "version": "0.1.791",
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-bump": "~0.0.15",
