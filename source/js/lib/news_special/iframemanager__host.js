@@ -40,7 +40,7 @@
                 hostId        = this.getWindowLocationOrigin(),
                 urlParams     = window.location.hash || '',
                 onBBC         = this.onBbcDomain();
-            
+
             this.addLoadingSpinner(link);
 
             if (this.hostIsNewsApp(token)) {
@@ -90,11 +90,11 @@
             spinnerHolder.innerHTML             = '<div id="bbc-news-visual-journalism-loading-spinner__text"></div>';
             spinnerHolder.style.backgroundColor = '#fff';
             spinnerHolder.appendChild(spinner);
-        
+
             link.parentNode.appendChild(spinnerHolder);
         },
         handleIframeLoad: function (startIframing) {
-            // IMPORTANT: Had to make this an onload because the 
+            // IMPORTANT: Had to make this an onload because the
             // polyfilling and jquery on one page causes issues
             window.addEventListener('load', function () {
                 startIframing();
@@ -102,7 +102,7 @@
             if (this.elm.onload) {
                 this.elm.onload = startIframing;
             }
-            // Bug in IE7 means onload doesn't fire when an iframe 
+            // Bug in IE7 means onload doesn't fire when an iframe
             // loads, but the event will fire if you attach it correctly
             else if ('attachEvent' in this.elm) {
                 this.elm.attachEvent('onload', startIframing);
@@ -236,10 +236,17 @@
         },
         getAnyInstructionsFromIframe: function () {
             if (
-                this.data.hostPageCallback &&
+                (this.data.msg = 'removeLoadingSpinner') &&
                 (!this.iframeInstructionsRan)
             ) {
+                this.removeLoadingSpinner();
                 this.iframeInstructionsRan = true;
+            }
+        },
+        removeLoadingSpinner: function () {
+            var iframeDivContainer = document.getElementById('bbc-news-visual-journalism-loading-spinner');
+            if (iframeDivContainer) {
+                iframeDivContainer.parentNode.removeChild(iframeDivContainer);
             }
         },
         getPath: function (url) {
